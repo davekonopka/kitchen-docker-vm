@@ -17,6 +17,7 @@ This Vagrantfile launches an ephemeral VirtualBox vm that exposes a [Docker](htt
 [Pull down a binary](http://davekonopka.share.s3.amazonaws.com/chef/docker) or build your own on OSX with Go. Either way the Docker CLI needs to be in your path on the OSX side. 
 
 * The Docker versions **must match** between host & guest or this will not work.
+* kitchen-docker expects Docker v0.6.6 at this point. Using an earlier version breaks kitchen operations.
 * The Docker daemon does not run on OSX. The CLI is used for communication.
 
 ## Usage
