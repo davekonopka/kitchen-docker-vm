@@ -48,3 +48,7 @@ platforms:
 ```
 
 `kitchen create` <-- Magic.
+
+## Credit
+
+This repo is heavily inspired by [@portertech](https://twitter.com/portertech)'s [efforts](https://github.com/portertech/lxc-vm).
