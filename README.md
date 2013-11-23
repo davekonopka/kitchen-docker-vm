@@ -14,11 +14,24 @@ This Vagrantfile launches an ephemeral VirtualBox vm that exposes a [Docker](htt
 
 ### Installing the Docker client on OSX
 
-[Pull down a binary](http://davekonopka.share.s3.amazonaws.com/chef/docker) or build your own on OSX with Go. Either way the Docker CLI needs to be in your path on the OSX side. 
+[Pull down a binary](http://davekonopka.share.s3.amazonaws.com/chef/docker) or build your own on OSX with Go. Either way the Docker CLI needs to be in your path on the OSX side.
+
+### Installing the Docker client on OSX from source
+
+```bash
+$ go get github.com/dotcloud/docker
+$ cd $GOPATH/src/github.com/dotcloud/docker/
+$ git checkout v0.6.6
+$ cd docker && go install
+$ $GOPATH/bin/docker
+```
+
+### Installation notes
 
 * The Docker versions **must match** between host & guest or this will not work.
 * kitchen-docker expects Docker v0.6.6 at this point. Using an earlier version breaks kitchen operations.
 * The Docker daemon does not run on OSX. The CLI is used for communication.
+* If you get `clang` errors compiling Docker from source, override `CC` with `gcc-4.2` (requires a `brew install apple-gcc42`).
 
 ## Usage
 
