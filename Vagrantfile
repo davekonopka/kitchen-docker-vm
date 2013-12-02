@@ -9,10 +9,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
   config.berkshelf.enabled = true
 
-  config.vm.box = "precise64"
+  config.vm.box = "opscode-ubuntu-12.04"
 
   config.vm.provider :virtualbox do |vb, override|
-    override.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    override.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box"
 
     vb.customize ["modifyvm", :id, "--name", "docker-kitchen"]
     vb.customize ["modifyvm", :id, "--memory", "1280"]
@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provider :vmware_fusion do |vm, override|
-    override.vm.box_url = "http://files.vagrantup.com/precise64_vmware_fusion.box"
+    override.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-12.04_chef-provisionerless.box"
 
     vm.vmx["memsize"] = "1280"
     vm.vmx["numvcpus"] = "2"
