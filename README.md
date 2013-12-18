@@ -2,11 +2,11 @@
 
 OSX w/ kitchen-docker + an ubuntu vm = <3 faster tests <3
 
-This Vagrantfile launches an ephemeral VirtualBox vm that exposes a [Docker](http://www.docker.io/) api capable of running Chef test-kitchen kitchens directly from OSX via [kitchen-docker](https://github.com/portertech/kitchen-docker).
+This Vagrantfile launches an ephemeral vm that exposes a [Docker](http://www.docker.io/) api capable of running Chef test-kitchen kitchens directly from OSX via [kitchen-docker](https://github.com/portertech/kitchen-docker).
 
 ## Prereqs
 
-* [VirtualBox](https://github.com/berkshelf/vagrant-berkshelf)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [VMware Fusion](http://www.vmware.com/products/fusion/) + [Vagrant VMware connector](http://docs.vagrantup.com/v2/vmware/)
 * [Vagrant](http://www.vagrantup.com/)
 * [vagrant-omnibus](https://github.com/schisamo/vagrant-omnibus)
 * [vagrant-berkshelf](https://github.com/berkshelf/vagrant-berkshelf)
