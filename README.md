@@ -48,7 +48,7 @@ driver_plugin: docker
 driver_config:
   use_sudo: false
   socket: tcp://192.168.101.101:4242
-  require_chef_omnibus: :latest
+  require_chef_omnibus: true
 
 platforms:
 - name: ubuntu-12.04
